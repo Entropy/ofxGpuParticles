@@ -110,7 +110,7 @@ namespace itg
     
     void GpuParticles::update()
     {
-        fbos[1 - currentReadFbo].begin(false);
+        fbos[1 - currentReadFbo].begin(ofFboBeginMode::NoDefaults);
 		
 		bool wasBlendEnabled = glIsEnabled(GL_BLEND);
 		glDisable(GL_BLEND);
